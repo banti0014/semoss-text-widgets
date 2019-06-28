@@ -1,28 +1,20 @@
-<!–– Default Setting: 4 KPIs spaced evenly vertically ––>
-<!–– Follow comments to complete on your own ––>
-
 <div class="projectFactsWrap ">
-	<!–– Delete or add an entire div class="item2" if you have more/less than 4 elements––>
 	<div class="item2">
-		<!–– Adjust the "Count#" variable to match your query name ––>
 		<p id="number1" class="number">{{Count1[0]["output"]["data"]["values"][0][0]}}</p>
 		<span2></span2>
 		<p>KPI 1</p>
 	</div>
 	<div class="item2">
-		<!–– Adjust the "Count#" variable to match your query name ––>
 		<p id="number2" class="number">{{Count2[0]["output"]["data"]["values"][0][0]}}</p>
 		<span2></span2>
 		<p>KPI 2</p>
 	</div>
 	<div class="item2">
-		<!–– Adjust the "Count#" variable to match your query name ––>
 		<p id="number3" class="number">{{Count3[0]["output"]["data"]["values"][0][0]}}</p>
 		<span2></span2>
 		<p>KPI 3</p>
 	</div>
 	<div class="item2">
-		<!–– Adjust the "Count#" variable to match your query name ––>
 		<p id="number4" class="number">{{Count4[0]["output"]["data"]["values"][0][0]}}</p>
 		<span2></span2>
 		<p>KPI 4</p>
