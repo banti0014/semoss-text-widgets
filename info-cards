@@ -1,0 +1,55 @@
+<!–– Default Setting: Card for each Item in your data ––>
+<!–– Follow comments to complete on your own ––>
+
+<!–– Adjust the "FrameData" variable name to match your query ––>
+<div ng-repeat="item in FrameData[0].output.data.values" style="word-wrap: break-word; margin-right: 25px">
+<div class = "header"> <font size = "5" color = #fff><b>{{item[0]}}</b></font></div>
+<div id="colorstrip"></div>
+<ol class="KPI">
+<li><span> Info 1:</span><p class = "infoPiece">{{item[1]}}</p></li>
+<li><span> Info 2:</span><p class = "infoPiece">{{item[2]}}</p></li>
+<li><span> Info 3:</span><p class = "infoPiece">{{item[3]}}</p></li>
+<li><span> Info 4:</span><p class = "infoPiece">{{item[4]}}</p></li>
+<li><span> Info 5:</span><p class = "infoPiece">{{item[5]}}</p></li>
+<li><span> Info 6:</span><p class = "infoPiece">{{item[6]}}</p></li>
+<li><span> Info 7:</span><p class = "infoPiece">{{item[7]}}</p></li>
+<li><span> Info 8:</span><p class = "infoPiece">{{item[8]}}</p></li>
+<li><span> Info 9:</span><p class = "infoPiece">{{item[9]}}</p></li>
+<li><span> Info 10:</span><p class = "infoPiece">{{item[10]}}</p></li>
+
+</ol>
+</div>
+<style>
+#TextWidget #colorstrip{
+    width: 100%; height: 2px;
+    border-style: solid;
+	/* Adjust the colors here to change the color strip beneath the header's fill color */
+    border-color: #5e61e3;
+    background-color: #5e61e3;
+    margin-bottom: 10px;
+}
+#TextWidget .header{
+	/* Adjust the color here to change the header's fill color */
+	background-color: #000000;
+	padding-left: 10px;
+}
+#TextWidget ol{
+  color: #000000;
+  list-style-type: none;
+}
+#TextWidget ol li{
+  position: relative;
+  font: bold italic 16px/1.5 Helvetica, Verdana, sans-serif;
+  margin-bottom: 10px;
+  left: 5px;
+}
+#TextWidget li p.infoPiece{
+	/* Adjust the color, font, etc. here to change the bulletted item's font color */
+  font: 16px/1.5 Helvetica, sans-serif;
+  padding-left: 130px;
+  color: #000;
+}
+#TextWidget .KPI span{
+  position: absolute;
+}
+</style>
