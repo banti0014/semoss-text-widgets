@@ -1,0 +1,107 @@
+<!–– Default Setting: 6 column tables spaced evenly ––>
+<!–– Follow comments to complete on your own ––>
+
+<style>
+    #TextWidget .big-container{
+        display: inline-flex;
+        overflow: auto;
+        padding: 25px;
+        position: relative;
+        padding-bottom: 15px;
+    }
+
+    #TextWidget .site-container{
+        margin-right: 25px;
+        position: relative;
+    }
+
+    #TextWidget .sample-table{
+        height: 100%;
+        border-collapse: collapse;
+		/* Adjust the border here to change the table lines */
+        border: 1px solid #000;
+        width: 100%;
+    }
+
+    #TextWidget .sample-table__head{
+		/* Adjust the background-color here to change the table header fill color */
+        background-color: #000;
+		/* Adjust the color here to change the table header font color */
+        color: #ffffff;
+        font-size: 150%;
+        font-family: sans-serif;
+		/* Adjust the color here to change the line color separating the header and subheader */
+        border-bottom: 1px solid #FFFFFF;
+    }
+              
+    #TextWidget .sample-table__subhead{
+		/* Adjust the background-color here to change the table subheader fill color */
+        background-color: #5e61e3;
+        font-size: 115%;
+        font-weight: bold;
+        font-family: sans-serif;
+		/* Adjust the color here to change the table header font color */
+        color: #ffffff;
+		/* Adjust the color here to change the line color separating the subheader and table */
+        border-bottom: 1px solid #002060;
+    }
+
+    #TextWidget .sample-table__body{
+        height: calc(100% - 80px);
+        width: 100%;
+        overflow: auto;
+    }
+
+    #TextWidget .error-row:hover{
+		/* Adjust the color here to change the hover color */
+        background-color: #BFC6D4;
+    }
+
+    #TextWidget .error-row div{
+		/* Adjust the border here (both places) to change the table lines */
+        border-left: 1px solid #000;
+		 border-bottom: 1px solid #000;
+		 font-family: sans-serif;
+		 font-size: 90%;
+		 height: 110%
+    }
+              
+</style>
+<div class="sample-table">
+    <div class="sample-table__head">
+        <div class="smss-row">
+            <div class="smss-col smss-col--12">
+				<!–– Adjust the Header Name ––>
+                <b>Table Header</b>
+            </div>
+        </div>
+              </div>
+              <div class="sample-table__subhead">
+					<div class="smss-row">
+						<!–– Adjust the Column Names Here. The Dropdown is placed in Column 1 ––>
+						<!–– Adjust the Number of Columns and Column Spacing Here. Change the "--1" to other widths. Must sum to 12 ––>
+						<!–– Adjust the Drop Down Values Here. 'ALL' will unfilter, whereas the others will filter to that selection ––>
+                                           <div class="smss-col smss-col--2"><select style=" height:100%; width:80%; " ng-model="option" ng-change="textWidget.runPixel(&quot; if ( ( <test> == [ALL] ) , ( UnfilterFrame ( ) ) , ( Frame ( )|SetFrameFilter ( ( System == [<test>])) ) ) &quot;, ['test'], [option]);" ng-options="option as option for option in ['ALL','1','2','3','4','5']"></select></div>
+                                           <div class="smss-col smss-col--2">Col 2</div>
+                                           <div class="smss-col smss-col--2">Col 3</div>
+                                           <div class="smss-col smss-col--2">Col 4</div>
+                                           <div class="smss-col smss-col--2">Col 5</div>
+                                           <div class="smss-col smss-col--2">Col 6</div>  										   
+                             </div>
+              </div>
+    <div class="sample-table__body">
+		<!–– Adjust the "FrameData" variable name to match your query ––>
+        <div ng-repeat-start="item in FrameData[0].output.data.values"
+             class="smss-row error-row">
+                                           <div class="smss-col smss-col--2"  >{{item[1]}}</div>
+                                           <div class="smss-col smss-col--2"  >{{item[2]}}</div>
+                                           <div class="smss-col smss-col--2"  >{{item[3]}}</div>
+                                           <div class="smss-col smss-col--2"  >{{item[4]}}</div>
+                                           <div class="smss-col smss-col--2"  >{{item[5]}}</div>
+                                           <div class="smss-col smss-col--2"  >{{item[6]}}</div>
+        </div>
+        <div ng-repeat-end
+             class="smss-row error-row">
+        </div>
+    </div>
+</div>
