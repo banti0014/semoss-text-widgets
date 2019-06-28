@@ -1,0 +1,71 @@
+<!–– Default Setting: 4 KPIs spaced evenly vertically ––>
+<!–– Follow comments to complete on your own ––>
+
+<div class="projectFactsWrap ">
+	<!–– Delete or add an entire div class="item2" if you have more/less than 4 elements––>
+	<div class="item2">
+		<!–– Adjust the "Count#" variable to match your query name ––>
+		<p id="number1" class="number">{{Count1[0]["output"]["data"]["values"][0][0]}}</p>
+		<span2></span2>
+		<p>KPI 1</p>
+	</div>
+	<div class="item2">
+		<!–– Adjust the "Count#" variable to match your query name ––>
+		<p id="number2" class="number">{{Count2[0]["output"]["data"]["values"][0][0]}}</p>
+		<span2></span2>
+		<p>KPI 2</p>
+	</div>
+	<div class="item2">
+		<!–– Adjust the "Count#" variable to match your query name ––>
+		<p id="number3" class="number">{{Count3[0]["output"]["data"]["values"][0][0]}}</p>
+		<span2></span2>
+		<p>KPI 3</p>
+	</div>
+	<div class="item2">
+		<!–– Adjust the "Count#" variable to match your query name ––>
+		<p id="number4" class="number">{{Count4[0]["output"]["data"]["values"][0][0]}}</p>
+		<span2></span2>
+		<p>KPI 4</p>
+	</div>
+</div>
+
+<style>
+
+#TextWidget .projectFactsWrap{
+  /* Adjust the background here to change background color */
+  background: #fff;
+  height: 100%
+}
+
+#TextWidget .projectFactsWrap .item2{
+  width: 100%;
+  /* Adjust the height here if you have more/less than 4 elements */
+  height: 25%;
+  text-align: center;
+}
+
+#TextWidget .projectFactsWrap .item2 p.number{
+  font-size: 37px;
+  font-weight: bold;
+}
+
+#TextWidget .projectFactsWrap .item2 p{
+  /* Adjust the color here to change color of the font */
+  color: rgba(0, 0, 0, 1.0);
+  font-size: 18px;
+  margin: 0;
+  padding: 6px;
+  font-family: 'Open Sans';
+}
+
+
+#TextWidget .projectFactsWrap .item2 span2{
+  width: 60px;
+  /* Adjust the background here to change color of the horizontal line */
+  background: rgba(0, 0, 0, 1.0);
+  height: 2px;
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
